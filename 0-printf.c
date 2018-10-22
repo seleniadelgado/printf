@@ -21,17 +21,22 @@ int _printf(const char *format, ...)
 	};
 
 	va_list args;
+
 	unsigned int i = 0;
 	unsigned int j = 0;
 
 	va_start(args format);
 	while ((format != NULL) && (format [i] != '\0'))
-		while(format[i] != '%')
-		{
+		if (format[i] == '%')
+			while (j < 5)
+			{
 			if (format[i] == *(green[j].prin))
-				write(1, format ,sizeof(format))
-					i++;
-	}
-	if ([format[i]
-	va_end(args)
+				if (format[i + 1] == *(green[j].prin))
+
+(write(1, format, sizeof(format))
+
+
+i++;
+}
+va_end(args)
 }
