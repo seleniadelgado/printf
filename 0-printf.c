@@ -11,6 +11,7 @@
  */
 int _printf(const char *format, ...)
 {
+
         consp green[] = {
         {"c", print_c},
         {"s", print_s},
@@ -50,7 +51,7 @@ int _printf(const char *format, ...)
 			(write(1, error, sizeof(format)));
 		}
 		i++;
-        }
+
 	if (format != '%')
 		return(format);
 
