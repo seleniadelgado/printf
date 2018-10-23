@@ -51,7 +51,7 @@ int _printf(const char *format, ...)
 			(write(1, error, sizeof(5)));
 		}
 		i++;
-
+	}
 	if (format != '%')
 		return(format);
 
