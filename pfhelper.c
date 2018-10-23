@@ -13,11 +13,11 @@ int print_c(va_list args)
 {
 	char c;
 
-	c = (va_arg(args)
+	c = (va_arg(args))
 	if (c == NULL)
 		return (0);
 	write(1, c, sizeof(char))
-		return (c);
+		return (0);
 }
 
 /**
@@ -35,8 +35,10 @@ int print_s(va_list args)
 	int i = 0;
 	if (s == NULL)
 		return (0);
-	if (s[i] == '\0')
-	return (s);
+	While (s[i] != '\0')
+		i++;
+	write(1, s, i)
+		return (0);
 }
 /**
  * print_pct - function that prints '%' symbol.
@@ -47,9 +49,10 @@ int print_s(va_list args)
  */
 int print_pct(va_list args)
 {
+	char *p;
 	p = va_arg(arg, char)
-		write(1, 37, 6)
-		return (p);
+		write(1, 37, sizeof(char))
+		return (0);
 }
 /**
  * print_d - function parameter to print a digit.
@@ -60,13 +63,11 @@ int print_pct(va_list args)
  */
 int print_d(va_list args)
 {
-	int d = 0;
+	char *d;
 
-	d = va_arg(arg char);
-	if ((d < 0) || (d > 0))
-		d++;
-	return (d);
-
+	d = itoa_p(va_list args);
+	write(1, d, sizeof(d));
+	return (0);
 }
 /**
  * print_i - function to print an integer.
@@ -77,11 +78,11 @@ int print_d(va_list args)
  */
 int print_i(va_list args)
 {
-	int i = 0;
+	unsigned int i;
 
-	i = va_arg(arg, char)
-		if (i > 0);
-
+	i = itoa_p(va_list args)
+	write(1, i, sizeof(d));
+	return (0);
 }
 /**
  * itoa_p - function to convert an integer into a string.
@@ -92,21 +93,18 @@ int print_i(va_list args)
 char *itoa_p(int)
 {
 	char *s ;
-	int z = 0;
-	int i;
+	unsigned int i;
+	unsigned int mod;
 
-	while (z > 10)
+	while (i > 10)
 	{
-		i = z % 10;
-		putchar(i);
-		z = z / 10
-			i++;
+
 	}
-	if (z < 10)
-	z = i;
-	putchar (i);
+
 /**
 	(input char * into reverse string function)
 */
 	returns (0);
 }
+
+

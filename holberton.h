@@ -8,8 +8,8 @@
 typedef struct pf
 {
 	char *prin
-	void (*type)(va_list args)
-};printf
+	int (*type)(va_list args)
+};consp
 int _printf(const char *format, ...);
 int print_c(va_list args);
 int print_s(va_list args);
