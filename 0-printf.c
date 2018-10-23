@@ -11,7 +11,7 @@
  */
 int _printf(const char *format, ...)
 {
-	printf green[] = {
+	consp green[] = {
 	{"c", print_c},
 	{"s", print_s},
 	{"pct", print_pct},
@@ -26,17 +26,27 @@ int _printf(const char *format, ...)
 	unsigned int j = 0;
 
 	va_start(args format);
-	while ((format != NULL) && (format [i] != '\0'))
+	while ((format != NULL) && (format[i] != '\0'))
+	{
 		if (format[i] == '%')
-			while (j < 5)
+
+			while (consp[j] < 5)
 			{
-			if (format[i] == *(green[j].prin))
 				if (format[i + 1] == *(green[j].prin))
+				{
+					(write(1, format, sizeof(format)));
 
-(write(1, format, sizeof(format))
+					type[j].type(list);
 
+				}
+				else
+					j++;
 
-i++;
-}
-va_end(args)
+			}
+		if (j = 5)
+			(write(1, error, sizeof(format)));
+
+		i++;
+	}
+	va_end(args)
 }
