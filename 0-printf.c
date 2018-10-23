@@ -26,11 +26,15 @@ int _printf(const char *format, ...)
         unsigned int j = 0;
 
         va_start(args format);
-        while ((format != NULL) && (format[i] != '\0'))
+
+	if (format == NULL)
+		return(-1);
+
+        while (format[i] != '\0')
         {
                 if (format[i] == '%')
-
-                        while (consp[j] < 5)
+		{
+			while (j < 5)
                         {
                                 if (format[i + 1] == *(green[j].prin))
                                 {
