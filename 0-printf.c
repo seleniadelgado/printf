@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 					j++;
 
 		if (j = 5)
-			(write(1, error, sizeof(format)));
+			(write(1, error, sizeof(5)));
 		}
 		i++;
 
