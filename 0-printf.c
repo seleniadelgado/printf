@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 
         unsigned int i = 0;
         unsigned int j = 0;
+	int num_printed;
 
         va_start(args format);
 
@@ -37,14 +38,13 @@ int _printf(const char *format, ...)
 			while (j < 5)
                         {
                                 if (format[i + 1] == *(green[j].prin))
-                                {
-                                        (write(1, format, sizeof(format)));
-
-                                        type[j].type(list);
-
-                                }
+				{
+					num_printed += (green[j].type(args))
+					break;
+				}
+			}
                                 else
-                                        j++;
+					j++;
 
                         }
                 if (j = 5)
