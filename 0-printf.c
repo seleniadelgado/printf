@@ -46,11 +46,13 @@ int _printf(const char *format, ...)
                                 else
 					j++;
 
-                        }
-                if (j = 5)
-                        (write(1, error, sizeof(format)));
-
-                i++;
+		if (j = 5)
+			(write(1, error, sizeof(format)));
+		}
+		i++;
         }
+	if (format != '%')
+		return(format);
+
         va_end(args)
 }
