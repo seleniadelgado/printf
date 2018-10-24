@@ -15,7 +15,7 @@ int print_c(va_list args)
 	c = (va_arg(args, int));
 	if (c == '\0')
 		return (0);
-	write(1, &c, sizeof(c));
+	_putcharf(c);
 		return (1);
 }
 
@@ -29,26 +29,13 @@ int print_s(va_list args)
 	char *s;
 	int i;
 
-	*s = va_arg(args, int);
 	i = 0;
+	*s = va_arg(args, int);
 	if (s == NULL)
 		return (0);
 	while (s[i] != '\0')
 		i++;
-	write(1, &s, i);
-		return (0);
-}
-/**
- * print_pct - function that prints '%' symbol.
- * @args: arguments passed to the function.
- * Return: returns a %.
- */
-int print_pct(va_list args)
-{
-	char *p;
-
-	*p = va_arg(args, int);
-	write(1, &p, sizeof(char));
+	write (1, &s, sizeof(char *));
 		return (0);
 }
 /**
@@ -63,6 +50,7 @@ int print_d(va_list args)
 
 	ptr = 0;
 
+	ptr = malloc(sizeof(char *));
 	d = (va_arg(args, int));
 	ptr = itoa_p(d);
 	printf("%s\n", ptr);
