@@ -1,59 +1,48 @@
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stdio.h>
 #include "holberton.h"
-
 /**
- * printf - function that produces output according to a format.
- * @format - constant char format.
- *
- *
+ * _printf - function that produces output according to a format.
+ * @format: constant char format.
+ * Return: the numbers that are printed.
  */
 int _printf(const char *format, ...)
 {
-
-        consp green[] = {
-        {"c", print_c},
-        {"s", print_s},
-        {"pct", print_pct},
-        {"d", print_d},
-        {"i", print_i},
-        {NULL, NULL}
-        };
-
-        va_list args;
-
-        unsigned int i = 0;
-        unsigned int j = 0;
+	consp green[] = {
+	{"c", print_c},	{"s", print_s},
+	{"%", print_pct}, {"d", print_d},
+	{"i", print_d}, {NULL, NULL}
+	};
+	va_list args;
+	unsigned int i = 0;
+	unsigned int j = 0;
 	int num_printed;
 
-        va_start(args format);
-
+	va_start(args, format);
+	num_printed = 0;
 	if (format == NULL)
-		return(-1);
-
-        while (format[i] != '\0')
-        {
-                if (format[i] == '%')
+		return (-1);
+	while (format[i] != '\0')
+	{
+		if (format[i] == '%')
 		{
 			while (j < 5)
-                        {
-                                if (format[i + 1] == *(green[j].prin))
+			{
+				if (format[i + 1] == *(green[j].prin))
 				{
-					num_printed += (green[j].type(args))
+					num_printed += (green[j].type(args));
+					i += 1;
 					break;
 				}
+				else
+				j++;
 			}
-                                else
-					j++;
-
-		if (j = 5)
-			(write(1, error, sizeof(5)));
+		}
+		else
+		{
+			_putcharf(format[i]);
+			num_printed += 1;
 		}
 		i++;
 	}
-	if (format != '%')
-		return(format);
-
-        va_end(args)
+	va_end(args);
+	return (num_printed);
 }
