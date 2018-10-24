@@ -1,27 +1,27 @@
-###.TH Printf "October 24, 2018"
-
-
-
-###.SH NAME _printf (Print Format) produces output according to a format.
-
-
+###. TH "October 24, 2018"
+###NAME _printf (Print Format) produces output according to a format.
 
 ###.SH SYNOPSIS -
-
-
-
-###_printf FORMAT [ARGUMENT]
-
-
-
-###_printf OPTION
-
-
-
+printf FORMAT [ARGUMENT]...
+printf OPTION
 
 ###.SH DESCRIPTION
-Prints ARGUMENT(s) based on what FORMAT is entered.
-Output is written into standard out.
+Prints ARGUMENT(s) based on what FORMAT is entered. output is written into
+standard out.
 
-###.SH AUTHOR
-Written by Angie Delgado and Scout Curry.
+Conversion specifiers
+       A character that converts into a specific type. The conversion specifiers
+this printf function accounts for are:
+
+       d, i            integer - int argument to convert into an unsigned
+       	  	       decimal number.
+
+       c,              character - int argument converted to char.
+
+       s,              constant character pointer - argument that is expected to
+       		       be a pointer to an array of characters. This does not
+		       include the null byte.
+
+       %,              percent - no conversion is necessary, print percent sign.
+
+###.SH AUTHOR Written by Angie Delgado and Scout Curry.
