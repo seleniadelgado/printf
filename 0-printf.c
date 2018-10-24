@@ -3,19 +3,19 @@
 /**
  * printf - function that produces output according to a format.
  * @format - constant char format.
- * Return: the numbers that are printed. 
+ * Return: the numbers that are printed.
  */
 int _printf(const char *format, ...)
 {
 
-        consp green[] = {
-        {"c", print_c},
-        {"s", print_s},
-        {"%", print_pct},
-        {"d", print_d},
-        {"i", print_i},
-        {NULL, NULL}
-        };
+	consp green[] = {
+	{"c", print_c},
+	{"s", print_s},
+	{"%", print_pct},
+	{"d", print_d},
+	{"i", print_i},
+	{NULL, NULL}
+	};
 
         va_list args;
         unsigned int i = 0;
