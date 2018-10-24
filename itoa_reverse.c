@@ -31,6 +31,8 @@ char *itoa_p(int n)
 		bag = 1 + bag;
 			}
 	str = malloc(1 + bag * (sizeof(char)));
+	if (str == NULL)
+	return (NULL);
 	while (bag)
 	{
 		str[i] = n2 % 10 + '0';

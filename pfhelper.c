@@ -67,23 +67,6 @@ int print_d(va_list args)
 	ptr = itoa_p(d);
 	printf("%s\n", ptr);
 	_putcharf(d);
-	return (0);
-}
-/**
- * print_i - function to print an integer.
- * @args: parameter used to test integer.
- * Return: 0.
- */
-int print_i(va_list args)
-{
-	int i;
-	char *str;
-
-	str = 0;
-
-	i = (va_arg(args, int));
-	str = itoa_p(i);
-	printf("%s\n", str);
-	_putcharf(i);
+	free(ptr);
 	return (0);
 }
