@@ -1,9 +1,11 @@
 #include "holberton.h"
+
 /**
  * _printf - function that produces output according to a format.
  * @format: constant char format.
  * Return: the numbers that are printed.
  */
+
 int _printf(const char *format, ...)
 {
 	consp green[] = {
@@ -26,7 +28,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			j = 0;
 			while (green[j].prin != NULL)
 			{
 				if (format[i + 1] == '%')
@@ -37,6 +38,8 @@ int _printf(const char *format, ...)
 					i += 1;
 					break;
 				}
+				else if (format[i + 1] == '\0')
+					return(-1);
 				else
 				j++;
 			}
@@ -49,5 +52,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	return (num_printed);
+	return(num_printed);
 }
