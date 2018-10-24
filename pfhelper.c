@@ -33,7 +33,7 @@ int print_s(va_list args)
 	i = 0;
 	if (s == NULL)
 		return (0);
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	write(1, &s, i);
 		return (0);
@@ -86,35 +86,4 @@ int print_i(va_list args)
 	printf("%s\n", str);
 	_putcharf(i);
 	return (0);
-}
-/**
- * itoa_p - function to convert an integer into a string.
- * @args: parameter to change to a string.
- * Return: 0.
- */
-char *itoa_p(int i)
-{
-	
-	unsigned int z;
-	unsigned int mod;
-
-	z = 0;
-	mod = 0;
-	while (i > 10)
-	{
-		z = i % 10;
-		mod += z;
-		z = 0;
-		z = i / 10;
-		i = z;
-		z = 0;
-		_putcharf(mod);
-		      mod = 0;
-	}
-	if (i < 10)
-	{
-		z = i;
-		_putcharf(i);
-	}
-	return(0);
 }

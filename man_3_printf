@@ -1,4 +1,4 @@
-###.TH Printf "October 24, 2018" 
+###.TH Printf "October 24, 2018"
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-###.SH SYNOPSIS - 
+###.SH SYNOPSIS -
 
 
 
@@ -20,7 +20,8 @@
 
 
 ###.SH DESCRIPTION
-Prints ARGUMENT(s) based on what FORMAT is entered. output is written into standard out. 
+Prints ARGUMENT(s) based on what FORMAT is entered.
+Output is written into standard out.
 
 ###.SH AUTHOR
 Written by Angie Delgado and Scout Curry.
