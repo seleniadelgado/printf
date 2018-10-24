@@ -1,0 +1,25 @@
+###NAME
+	 _printf (Print Format) produces output according to a format.
+
+
+###.SH SYNOPSIS -
+
+
+###_printf FORMAT [ARGUMENT]
+
+
+###_printf OPTION
+
+
+###.SH DESCRIPTION Prints ARGUMENT(s) based on what FORMAT is entered. output is written into standard out. 
+
+Conversion specifiers
+	A character that converts into a specific type. the conversion specifiers this printf function accounts
+	for are:
+		d, integer - int argument to convert into an unsigned decimal number.
+
+		c, character - int argument converted to char, with 
+
+
+###.SH AUTHOR Written by Angie Delgado and Scout Curry.
+
