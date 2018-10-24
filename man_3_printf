@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###NAME
 	 _printf (Print Format) produces output according to a format.
 
@@ -45,3 +46,32 @@ Return value
 
 ###.SH AUTHOR Written by Angie Delgado and Scout Curry.
 
+=======
+###.TH Printf "October 24, 2018"
+
+
+
+###.SH NAME _printf (Print Format) produces output according to a format.
+
+
+
+###.SH SYNOPSIS -
+
+
+
+###_printf FORMAT [ARGUMENT]
+
+
+
+###_printf OPTION
+
+
+
+
+###.SH DESCRIPTION
+Prints ARGUMENT(s) based on what FORMAT is entered.
+Output is written into standard out.
+
+###.SH AUTHOR
+Written by Angie Delgado and Scout Curry.
+>>>>>>> 01299c5d91c70b369d61982213694e4086efad0a
