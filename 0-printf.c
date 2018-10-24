@@ -24,7 +24,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			while (j < 5)
+			j = 0;
+			while (green[j].prin != NULL)
 			{
 				if (format[i + 1] == *(green[j].prin))
 				{

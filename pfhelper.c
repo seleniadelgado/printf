@@ -60,13 +60,14 @@ int print_d(va_list args)
 {
 	int d;
 	char *ptr;
+	int size;
 
 	ptr = 0;
 
 	d = (va_arg(args, int));
 	ptr = itoa_p(d);
-	printf("%s\n", ptr);
-	_putcharf(d);
+	size = _strlen(ptr);
+	write(1, ptr, size);
 	free(ptr);
 	return (0);
 }
