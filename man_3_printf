@@ -1,5 +1,5 @@
 ###NAME
-	 _printf (Print Format) produces output according to a format.
+         _printf (Print Format) produces output according to a format.
 
 
 ###.SH SYNOPSIS -
@@ -21,25 +21,25 @@ int print_pct(va_list args);
 int print_d(va_list args);
 int print_i(va_list args);
 
-###.SH DESCRIPTION 
-Prints ARGUMENT(s) based on what FORMAT is entered. output is written into standard out. 
+###.SH DESCRIPTION
+Prints ARGUMENT(s) based on what FORMAT is entered. output is written into standard out.
 
 Conversion specifiers
-	A character that converts into a specific type. the conversion specifiers this printf function accounts
-	for are:
-	d, i	 	integer - int argument to convert into an unsigned decimal
-		     	number.
+        A character that converts into a specific type. the conversion specifiers this printf function accounts
+        for are:
+        d, i            integer - int argument to convert into an unsigned decimal
+                        number.
 
-	c,	   	character - int argument converted to char.
+        c,              character - int argument converted to char.
 
-	s,	   	constant character pointer - argument that is expected to be a 			
-			pointer to an array of characters. This does not include the
- 			null byte.
+        s,              constant character pointer - argument that is expected to be a
+                        pointer to an array of characters. This does not include the
+                        null byte.
 
-	%,	   	percent - no conversion is necessary, print percent sign.
+        %,              percent - no conversion is necessary, print percent sign.
 
 Return value
-	format		Number of characters printed in main printf function.
+        format          Number of characters printed in main printf function.
 
 
 
