@@ -7,6 +7,8 @@
 #include <unistd.h>
 /**
  * struct pf - structure used in printf function.
+ * @prin: parameter used for pointer char.
+ * @type: parameter used for function type.
  */
 typedef struct pf
 {
@@ -21,4 +23,5 @@ int print_i(va_list args);
 void rev_string(char *s);
 int _putcharf(char c);
 char *itoa_p(int);
+int _strlen(char *s);
 #endif

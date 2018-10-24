@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 ###NAME
          _printf (Print Format) produces output according to a format.
 
+=======
+###. TH "October 24, 2018"
+###NAME _printf (Print Format) produces output according to a format.
+>>>>>>> 978813a1e482f0c08681c24cb83e0c5380fc2d43
 
 ###.SH SYNOPSIS -
+printf FORMAT [ARGUMENT]...
+printf OPTION
 
+<<<<<<< HEAD
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,7 +48,30 @@ Conversion specifiers
 
 Return value
         format          Number of characters printed in main printf function.
+=======
+###.SH DESCRIPTION
+Prints ARGUMENT(s) based on what FORMAT is entered. output is written into
+standard out.
 
+Conversion specifiers
+       A character that converts into a specific type. The conversion specifiers
+this printf function accounts for are:
 
+       d, i            integer - int argument to convert into an unsigned
+       	  	       decimal number.
+
+       c,              character - int argument converted to char.
+>>>>>>> 978813a1e482f0c08681c24cb83e0c5380fc2d43
+
+       s,              constant character pointer - argument that is expected to
+       		       be a pointer to an array of characters. This does not
+		       include the null byte.
+
+<<<<<<< HEAD
 
 ###.SH AUTHOR Written by Angie Delgado and Scout Curry.
+=======
+       %,              percent - no conversion is necessary, print percent sign.
+
+###.SH AUTHOR Written by Angie Delgado and Scout Curry.
+>>>>>>> 978813a1e482f0c08681c24cb83e0c5380fc2d43
