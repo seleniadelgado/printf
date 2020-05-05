@@ -1,52 +1,48 @@
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stdio.h>
 #include "holberton.h"
-
 /**
- * printf - function that produces output according to a format.
- * @format - constant char format.
- *
- *
+ * _printf - function that produces output according to a format.
+ * @format: constant char format.
+ * Return: the numbers that are printed.
  */
 int _printf(const char *format, ...)
 {
 	consp green[] = {
-	{"c", print_c},
-	{"s", print_s},
-	{"pct", print_pct},
-	{"d", print_d},
-	{"i", print_i},
-	{NULL, NULL}
+	{"c", print_c},	{"s", print_s},
+	{"%", print_pct}, {"d", print_d},
+	{"i", print_d}, {NULL, NULL}
 	};
-
 	va_list args;
-
 	unsigned int i = 0;
 	unsigned int j = 0;
+	int num_printed;
 
-	va_start(args format);
-	while ((format != NULL) && (format[i] != '\0'))
+	va_start(args, format);
+	num_printed = 0;
+	if (format == NULL)
+		return (-1);
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
-
-			while (consp[j] < 5)
+		{
+			while (j < 5)
 			{
 				if (format[i + 1] == *(green[j].prin))
 				{
-					(write(1, format, sizeof(format)));
-
-					type[j].type(list);
-
+					num_printed += (green[j].type(args));
+					i += 1;
+					break;
 				}
 				else
-					j++;
-
+				j++;
 			}
-		if (j = 5)
-			(write(1, error, sizeof(format)));
-
+		}
+		else
+		{
+			_putcharf(format[i]);
+			num_printed += 1;
+		}
 		i++;
 	}
-	va_end(args)
+	va_end(args);
+	return (num_printed);
 }

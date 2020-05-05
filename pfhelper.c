@@ -2,68 +2,71 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- *@c: parameter to print in place of character.
- *
- *
- *
+ * print_c - function that prints char.
+ * @args: arguments passed into the function.
+ * Return: returns a char.
  */
 int print_c(va_list args)
 {
 	char c;
-	c = (va_arg(args)
-	     if (c == NULL)
-		     return;
-	     else
-	     write(1, c, sizeof(c))
-	     return (c);
+
+	c = (va_arg(args, int));
+	if (c == '\0')
+		return (0);
+	write(1, &c, sizeof(c));
+		return (1);
 }
 
 /**
- *@s: parameter to print a string.
- *
- *
- *
+ * print_s - function that prints a string.
+ * @args: parameter to print a string.
+ * Return: returns a string.
  */
 int print_s(va_list args)
 {
 	char *s;
-	s = va_arg(arg, char *);
-	put(s);
-	return (s);
+	int i;
+
+	*s = va_arg(args, int);
+	i = 0;
+	if (s == NULL)
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	write(1, &s, i);
+		return (0);
 }
 /**
- *
- *
- *
- *
+ * print_pct - function that prints '%' symbol.
+ * @args: arguments passed to the function.
+ * Return: returns a %.
  */
 int print_pct(va_list args)
 {
+	char *p;
 
-	c = va_arg(arg, char)
-		write(1, c, sizeof(char))
-		return (c);
+	*p = va_arg(args, int);
+	write(1, &p, sizeof(char));
+		return (0);
 }
 /**
- *
- *
- *
- *
+ * print_d - function parameter to print a digit.
+ * @args: parameter to print a digit.
+ * Return: returns a string.
  */
 int print_d(va_list args)
 {
+	int d;
+	char *ptr;
+
+	ptr = 0;
+
+	d = (va_arg(args, int));
+	ptr = itoa_p(d);
+	printf("%s\n", ptr);
+	_putcharf(d);
+	free(ptr);
+	return (0);
 }
-/**
- *
- *
- *
- *
- */
-int print_i(va_list args)
-{
-int z;
-
-}
-
-
