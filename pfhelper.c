@@ -2,68 +2,62 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- *@c: parameter to print in place of character.
- *
- *
- *
+ * print_c - function that prints char.
+ * @args: arguments passed into the function.
+ * Return: returns a char.
  */
 int print_c(va_list args)
 {
 	char c;
-	c = (va_arg(args)
-	     if (c == NULL)
-		     return;
-	     else
-	     write(1, c, sizeof(c))
-	     return (c);
+
+	c = (va_arg(args, int));
+	if (c == '\0')
+		return (0);
+	_putcharf(c);
+		return (1);
 }
 
 /**
- *@s: parameter to print a string.
- *
- *
- *
+ * print_s - function that prints a string.
+ * @args: parameter to print a string.
+ * Return: returns a string.
  */
 int print_s(va_list args)
 {
 	char *s;
-	s = va_arg(arg, char *);
-	put(s);
-	return (s);
-}
-/**
- *
- *
- *
- *
- */
-int print_pct(va_list args)
-{
+	int i;
 
-	c = va_arg(arg, char)
-		write(1, c, sizeof(char))
-		return (c);
+	i = 0;
+	s = va_arg(args, char *);
+	if (s == NULL)
+		return (0);
+	while (s[i] != '\0')
+	{
+		_putcharf(s[i]);
+		i++;
+	}
+		return (i);
 }
 /**
- *
- *
- *
- *
+ * print_d - function parameter to print a digit.
+ * @args: parameter to print a digit.
+ * Return: returns a string.
  */
 int print_d(va_list args)
 {
+	int d;
+	char *ptr;
+	int size;
+
+	ptr = 0;
+
+	ptr = malloc(sizeof(char *));
+	d = (va_arg(args, int));
+	ptr = itoa_p(d);
+	size = _strlen(ptr);
+	write(1, ptr, size);
+	free(ptr);
+	return (1);
 }
-/**
- *
- *
- *
- *
- */
-int print_i(va_list args)
-{
-int z;
-
-}
-
-
